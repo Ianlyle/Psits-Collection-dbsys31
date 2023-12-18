@@ -48,7 +48,7 @@ namespace Final_Project
         public USERACCOUNT GetUserByUsername(String username)
         {
             // re-initialize db object because sometimes data in the list not updated
-            using (db = new DB_PsitsModel())
+            using (db = new DB_PsitsModel()) //wapa nahuman
             {
                 // SELECT TOP 1 * FROM USERACCOUNT WHERE userName == username
                 return db.USERACCOUNTs.Where(s => s.username == username).FirstOrDefault();
